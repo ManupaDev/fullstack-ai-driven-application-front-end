@@ -7,6 +7,7 @@ import {
 import "./index.css";
 import RootLayout from "./layouts/RootLayout.tsx";
 import HomePage from "./pages/home/home.page.tsx";
+import NotFoundErrorPage from "./pages/not-found-error.page.tsx";
 
 const router = createBrowserRouter([
   {
@@ -17,7 +18,8 @@ const router = createBrowserRouter([
         index: true,
         element: <HomePage />
       }
-    ]
+    ],
+    errorElement: <NotFoundErrorPage />,
   },
 ]);
 
