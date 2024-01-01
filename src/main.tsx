@@ -5,7 +5,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import "./index.css";
-import RootLayout from "./layouts/RootLayout.tsx";
+import RootLayout from "./layouts/layout.tsx";
 import HomePage from "./pages/home/home.page.tsx";
 import NotFoundErrorPage from "./pages/not-found-error.page.tsx";
 
