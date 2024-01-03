@@ -68,7 +68,7 @@
 
 @layer base {
   * {
-    @apply border-border border;
+    @apply border-border;
   }
   body {
     @apply bg-background text-foreground;
@@ -76,5 +76,13 @@
   h1{
     @apply scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl;
   }
-  
+  h2{
+    @apply scroll-m-20 text-3xl font-semibold tracking-tight first:mt-0;
+  }
+  h3{
+    @apply scroll-m-20 text-2xl font-semibold tracking-tight;
+  }
+  p{
+    @apply leading-7 [&:not(:first-child)]:mt-6;
+  }
 }
