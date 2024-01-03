@@ -68,7 +68,7 @@
 
 @layer base {
   * {
-    @apply border-border;
+    @apply border-border border;
   }
   body {
     @apply bg-background text-foreground;
@@ -76,4 +76,5 @@
   h1{
     @apply scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl;
   }
+  
 }

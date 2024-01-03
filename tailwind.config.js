@@ -1,4 +1,4 @@
-/** @type {import('tailwindcss').Config} */
+  /** @type {import('tailwindcss').Config} */
 export const darkMode = ["class"];
 export const content = [
   "./pages/**/*.{ts,tsx}",
