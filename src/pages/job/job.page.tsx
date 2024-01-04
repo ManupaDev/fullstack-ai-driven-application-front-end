@@ -1,10 +1,13 @@
+import { Separator } from "@/components/ui/separator";
 import JobHeader from "./_components/JobHeader";
+import { Textarea } from "@/components/ui/textarea";
+import { Button } from "@/components/ui/button";
 
 function JobPage() {
   return (
     <main>
       <JobHeader />
-      <div className="mt-8">
+      <div className="mt-4 py-4">
         <p>
           Surge Global is a digital consultancy that leverages marketing, data,
           and technology to help businesses grow. As Sri Lanka’s leading digital
@@ -17,6 +20,14 @@ function JobPage() {
           Lanka, we help scale startups to Fortune 500 companies across the
           United States, United Kingdom, Australia, and Sri Lanka.
         </p>
+      </div>
+      <Separator />
+      <div className="py-8">
+        <h3>Tell us about your experience in development</h3>
+        <Textarea className="mt-4" />
+        <div className="mt-4">
+          <Button>Submit</Button>
+        </div>
       </div>
     </main>
   );
