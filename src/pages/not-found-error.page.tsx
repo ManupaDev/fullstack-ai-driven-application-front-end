@@ -1,7 +1,7 @@
 import { useRouteError } from "react-router-dom";
 
 export default function NotFoundErrorPage() {
-    const error: any = useRouteError();
+    const error = useRouteError();
     console.error(error);
 
     return (

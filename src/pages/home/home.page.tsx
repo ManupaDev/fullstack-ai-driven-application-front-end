@@ -3,10 +3,10 @@ import JobSection from "./_components/JobSection";
 
 function HomePage() {
   return (
-    <main>
+    <div>
       <Hero />
       <JobSection />
-    </main>
+    </div>
   );
 }
 

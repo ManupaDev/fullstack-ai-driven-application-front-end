@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 
 function JobPage() {
   return (
-    <main>
+    <div>
       <JobHeader />
       <div className="mt-4 py-4">
         <p>
@@ -29,7 +29,7 @@ function JobPage() {
           <Button>Submit</Button>
         </div>
       </div>
-    </main>
+    </div>
   );
 }
 
