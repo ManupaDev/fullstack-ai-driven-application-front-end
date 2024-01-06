@@ -1,4 +1,4 @@
-  /** @type {import('tailwindcss').Config} */
+/** @type {import('tailwindcss').Config} */
 export const darkMode = ["class"];
 export const content = [
   "./pages/**/*.{ts,tsx}",
@@ -16,6 +16,9 @@ export const theme = {
     },
   },
   extend: {
+    fontFamily: {
+      sans: ["Inter"],
+    },
     colors: {
       border: "hsl(var(--border))",
       input: "hsl(var(--input))",

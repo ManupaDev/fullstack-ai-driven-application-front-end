@@ -91,7 +91,7 @@ function JobPage() {
             </div>
           );
         })}
-        <Button type="submit" className="mt-8">
+        <Button type="submit" className="mt-8 bg-card text-card-foreground">
           Submit
         </Button>
       </form>

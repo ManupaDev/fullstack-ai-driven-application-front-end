@@ -37,14 +37,14 @@ function AdminJobApplicationPage() {
 
   return (
     <div className="py-4 flex flex-col gap-y-4">
-      <Card>
+      <Card className="bg-foreground">
         <CardHeader className="flex-row items-center gap-x-4">
           <CardTitle>{jobApplication?.fullName}</CardTitle>
           <Badge
             className={cn({
               "bg-red-500":
                 jobApplication?.rating?.toLocaleLowerCase() === "bad",
-              "bg-yellow-500":
+              "bg-orange-400":
                 jobApplication?.rating?.toLocaleLowerCase() === "moderate",
               "bg-teal-500":
                 jobApplication?.rating?.toLocaleLowerCase() === "good",
@@ -61,7 +61,9 @@ function AdminJobApplicationPage() {
         })}
       </Card>
       <div>
-        <Button onClick={() => navigate(-1)} variant="link">Back</Button>
+        <Button onClick={() => navigate(-1)} variant="link">
+          Back
+        </Button>
       </div>
     </div>
   );

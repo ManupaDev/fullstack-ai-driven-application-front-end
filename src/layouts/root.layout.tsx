@@ -4,7 +4,7 @@ import { Toaster } from "@/components/ui/sonner";
 function RootLayout() {
   return (
     <>
-      <main>
+      <main className="font-sans">
         <Outlet />
       </main>
       <Toaster />
