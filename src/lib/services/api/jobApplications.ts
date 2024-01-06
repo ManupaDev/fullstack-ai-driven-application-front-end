@@ -27,3 +27,9 @@ export const getJobApllicationsForJob = async (id: string) => {
   const data = res.json();
   return data;
 };
+
+export const getJobApplicationById = async (id: string) => {
+  const res = await api.get(`jobApplications/${id}`);
+  const data = res.json();
+  return data;
+};

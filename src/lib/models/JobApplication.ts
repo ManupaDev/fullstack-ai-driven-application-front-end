@@ -3,4 +3,5 @@ export type JobApplication = {
   userId: string;
   fullName: string;
   answers: string[];
+  rating?: string;
 };

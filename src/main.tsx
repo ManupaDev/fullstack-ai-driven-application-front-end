@@ -14,6 +14,7 @@ import SignInPage from "./pages/sign-in/sign-in.page.tsx";
 import SignUpPage from "./pages/sign-up/sign-up.page.tsx";
 import AdminJobPostsPage from "./pages/admin/jobPosts/admin-job-posts.page.tsx";
 import AdminJobPage from "./pages/admin/job/admin-job.page.tsx";
+import AdminJobApplicationPage from "./pages/admin/jobApplication/admin-job-application.page.tsx";
 
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
 
@@ -59,6 +60,10 @@ const router = createBrowserRouter([
           {
             path: "job/:id",
             element: <AdminJobPage />,
+          },
+          {
+            path: "job/:id/application/:applicationId",
+            element: <AdminJobApplicationPage />,
           },
         ],
       },
