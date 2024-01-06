@@ -13,11 +13,12 @@ type JobCardProps = {
   title: string;
   type: string;
   location: string;
+  isAdmin: boolean;
 };
 
-function JobCard({ title, type, location, _id }: JobCardProps) {
+function JobCard({ title, type, location, _id, isAdmin }: JobCardProps) {
   return (
-    <Link to={`/job/${_id}`} className="block">
+    <Link to={isAdmin ? `/admin/job/${_id}` : `/job/${_id}`} className="block">
       <Card>
         <CardHeader>
           <CardTitle>{title}</CardTitle>

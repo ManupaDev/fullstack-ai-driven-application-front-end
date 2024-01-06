@@ -12,6 +12,8 @@ import JobPage from "./pages/job/job.page.tsx";
 import NotFoundErrorPage from "./pages/not-found-error.page.tsx";
 import SignInPage from "./pages/sign-in/sign-in.page.tsx";
 import SignUpPage from "./pages/sign-up/sign-up.page.tsx";
+import AdminJobPostsPage from "./pages/admin/jobPosts/admin-job-posts.page.tsx";
+import AdminJobPage from "./pages/admin/job/admin-job.page.tsx";
 
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
 
@@ -47,8 +49,16 @@ const router = createBrowserRouter([
         element: <AdminMainLayout />,
         children: [
           {
-            path: "job/create",
+            path: "jobs/create",
             element: <JobCreatePage />,
+          },
+          {
+            path: "jobs",
+            element: <AdminJobPostsPage />,
+          },
+          {
+            path: "job/:id",
+            element: <AdminJobPage />,
           },
         ],
       },

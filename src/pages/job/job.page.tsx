@@ -41,7 +41,12 @@ function JobPage() {
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    applyForJob({ userId: user.user?.id, jobId: id!, answers });
+    applyForJob({
+      userId: user.user?.id,
+      fullName: user.user?.fullName,
+      jobId: id!,
+      answers,
+    });
   };
 
   if (isLoading) {

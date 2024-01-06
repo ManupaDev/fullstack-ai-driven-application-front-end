@@ -3,7 +3,7 @@ import { Job } from "@/lib/models/Job";
 import { getAllJobs } from "@/lib/services/api/jobs";
 import { useEffect, useState } from "react";
 
-function JobSection() {
+function JobPostsSection() {
   const [jobs, setJobs] = useState<Job[]>([]);
 
   useEffect(() => {
@@ -14,14 +14,14 @@ function JobSection() {
 
   return (
     <section className="py-8">
-      <h2>Available Jobs</h2>
+      <h2>Current Job Postings</h2>
       <div className="mt-4 flex flex-col gap-y-4">
         {jobs.map((job) => (
-          <JobCard key={job._id} {...job} isAdmin={false} />
+          <JobCard key={job._id} {...job} isAdmin={true}/>
         ))}
       </div>
     </section>
   );
 }
 
-export default JobSection;
+export default JobPostsSection;
