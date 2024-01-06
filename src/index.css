@@ -58,7 +58,7 @@
 
 @layer utilities {
   .text-underlay-1 {
-    background: linear-gradient(98deg, #d9ff00 -9.47%, #59a6dd 65.47%);
+    background: linear-gradient(98deg, #d9ff00 -9.47%, #00a49d 65.47%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

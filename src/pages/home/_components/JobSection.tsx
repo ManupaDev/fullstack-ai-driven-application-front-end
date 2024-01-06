@@ -15,7 +15,7 @@ function JobSection() {
   return (
     <section className="py-8">
       <h2>Available Jobs</h2>
-      <div className="mt-4 flex flex-col gap-y-4">
+      <div className="mt-4 flex flex-col gap-y-8">
         {jobs.map((job) => (
           <JobCard key={job._id} {...job} isAdmin={false} />
         ))}

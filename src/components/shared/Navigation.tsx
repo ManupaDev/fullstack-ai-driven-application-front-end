@@ -6,7 +6,7 @@ function Navigation() {
   return (
     <nav className="flex py-12 justify-between items-center">
       <div>
-        <h1 className="text-underlay-1">HirelyAI</h1>
+        <Link to={"/"} className="text-4xl font-medium text-underlay-1">HirelyAI</Link>
       </div>
       <div className="flex justify-center gap-x-8 items-center">
         <Link to={"/"}>Home</Link>
