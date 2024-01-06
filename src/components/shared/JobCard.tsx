@@ -1,34 +1,26 @@
-import { Briefcase, CircleDollarSign, MapPin } from "lucide-react";
+import { Briefcase, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 import {
   Card,
   CardContent,
-  CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
 } from "../ui/card";
 
 type JobCardProps = {
+  _id: string;
   title: string;
-  company: string;
   type: string;
   location: string;
-  pay: {
-    min: number;
-    max: number;
-  };
 };
 
-function JobCard({ title, company, type, location, pay }: JobCardProps) {
+function JobCard({ title, type, location, _id }: JobCardProps) {
   return (
-    <Link to={"/job/123"} className="block">
+    <Link to={`/job/${_id}`} className="block">
       <Card>
         <CardHeader>
-          <div>
-            <CardTitle>{title}</CardTitle>
-            <CardDescription>{company}</CardDescription>
-          </div>
+          <CardTitle>{title}</CardTitle>
         </CardHeader>
         <CardContent></CardContent>
         <CardFooter className="gap-x-4">
@@ -39,12 +31,6 @@ function JobCard({ title, company, type, location, pay }: JobCardProps) {
           <div className="flex items-center gap-x-2">
             <MapPin />
             <span>{location}</span>
-          </div>
-          <div className="flex items-center gap-x-2">
-            <CircleDollarSign />
-            <span>
-              $ {pay.min} - {pay.max}/mo
-            </span>
           </div>
         </CardFooter>
       </Card>
