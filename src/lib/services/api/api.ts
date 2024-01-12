@@ -1,4 +1,6 @@
 import ky from "ky";
 
-const api = ky.create({ prefixUrl: "http://localhost:8000/api" });
+const api = ky.create({
+  prefixUrl: "https://ai-driven-backend-production.up.railway.app/api",
+});
 export default api;
