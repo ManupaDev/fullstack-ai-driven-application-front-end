@@ -50,7 +50,7 @@
   }
 
   .hero {
-    background: url("/hero-3.png");
+    background: url("hero-3.png");
     background-position: center;
     background-size: cover;
   }
