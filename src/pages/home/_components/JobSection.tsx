@@ -10,7 +10,7 @@ function JobSection() {
     getAllJobs()
       .then((data) => setJobs(data as Job[]))
       .catch((err) => console.log(err));
-  }, []);
+  },[]);
 
   return (
     <section className="py-8">
