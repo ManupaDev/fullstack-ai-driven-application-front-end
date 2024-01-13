@@ -18,8 +18,7 @@ export const applyForJob = async ({
     });
     toast.success("Job Application Posted");
   } catch (error) {
-    //@ts-expect-error Error Type
-    toast.error(error.message);
+    toast.error("Error while sending job application");
   }
 };
 

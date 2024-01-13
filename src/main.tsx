@@ -48,14 +48,14 @@ const router = createBrowserRouter([
       {
         path: "admin",
         element: <AdminMainLayout />,
-        children: [
-          {
-            path: "jobs/create",
-            element: <JobCreatePage />,
-          },
+        children: [          
           {
             path: "jobs",
             element: <AdminJobPostsPage />,
+          },
+          {
+            path: "job/create",
+            element: <JobCreatePage />,
           },
           {
             path: "job/:id",

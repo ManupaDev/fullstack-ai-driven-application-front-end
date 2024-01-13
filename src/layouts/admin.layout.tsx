@@ -7,7 +7,7 @@ function AdminMainLayout() {
       <div className="flex justify-end gap-x-4 items-center py-4">
         <Link to="/admin/jobs">Job Posts</Link>
         <Button asChild>
-          <Link to="/admin/jobs/create">Post A Job</Link>
+          <Link to="/admin/job/create">Post A Job</Link>
         </Button>
       </div>
       <Outlet />
