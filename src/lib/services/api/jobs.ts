@@ -8,7 +8,13 @@ export const getAllJobs = async () => {
 };
 
 export const getJobById = async (id: string) => {
-  const res = await api.get(`jobs/${id}`);
+  const token = await window.Clerk.session.getToken();
+
+  const res = await api.get(`jobs/${id}`,{
+    headers:{
+      "Authorization":`Bearer ${token}`
+    }
+  });
   const data = res.json();
   return data;
 };
@@ -32,6 +38,6 @@ export const createJobPosting = async ({
     });
     toast.success("Job Posting Created");
   } catch (error) {
-    toast.error("Error while creating job post");    
+    toast.error("Error while creating job post");
   }
 };

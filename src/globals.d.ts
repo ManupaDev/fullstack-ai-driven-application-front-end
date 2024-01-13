@@ -1,9 +1,11 @@
 export {};
 
 declare global {
-  interface CustomJwtSessionClaims {
-    metadata: {
-      role?: "admin";
+  interface Window {
+    Clerk: {
+      session: {
+        getToken: () => Promise<string>;
+      };
     };
   }
 }

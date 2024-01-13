@@ -12,9 +12,14 @@ export const applyForJob = async ({
   jobId: string;
   answers: string[];
 }) => {
+  const token = await window.Clerk.session.getToken();
+
   try {
     await api.post("jobApplications", {
       json: { userId, fullName, job: jobId, answers },
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
     });
     toast.success("Job Application Posted");
   } catch (error) {
@@ -23,13 +28,25 @@ export const applyForJob = async ({
 };
 
 export const getJobApllicationsForJob = async (id: string) => {
-  const res = await api.get(`jobApplications?jobId=${id}`);
+  const token = await window.Clerk.session.getToken();
+
+  const res = await api.get(`jobApplications?jobId=${id}`, {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  });
   const data = res.json();
   return data;
 };
 
 export const getJobApplicationById = async (id: string) => {
-  const res = await api.get(`jobApplications/${id}`);
+  const token = await window.Clerk.session.getToken();
+
+  const res = await api.get(`jobApplications/${id}`, {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  });
   const data = res.json();
   return data;
 };
