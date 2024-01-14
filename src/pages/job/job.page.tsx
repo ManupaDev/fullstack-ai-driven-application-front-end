@@ -97,8 +97,8 @@ function JobPage() {
                   <Textarea
                     className="mt-2"
                     name={`a${i + 1}`}
-                    //@ts-expect-error String Key
-                    value={formData[`a${i + 1}`]}
+                   
+                    value={formData[`a${i + 1}` as keyof Omit<typeof formData,"fullName">]}
                     onChange={handleChange}
                     required
                   />
